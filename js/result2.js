@@ -10,7 +10,6 @@ function result2() {
     mainMenuButton();
     aboutButton();
     settingsButton();
-    highScore();
     tryAgainButton();
 } 
 

@@ -9,7 +9,6 @@ function start3() {
     startButton();
     aboutButton();
     settingsButton();
-    highScore();
 }
 
 let state = "start3";

@@ -125,7 +125,6 @@ function result1() {
     mainMenuButton();
     aboutButton();
     settingsButton();
-    highScore();
     tryAgainButton();
     dispScore1();
 } 
