@@ -11,8 +11,6 @@ function setup() {
 }
 
 var right = 0;
-//let bcolor = "Ivory";
-
 
 function mainMenuButton() {
     fill('lemonChiffon');
@@ -106,7 +104,7 @@ function lightCyan() {
     rect(500, 200, 180, 60, 20);
     fill('black');
     textSize(28);
-    text("Light Cyan", 523, 240);
+    text("Light Cyan", 527, 240);
 }
 
 function ivory() {
@@ -133,10 +131,10 @@ function olive() {
     text("Olive", 320, 390);
 }
 
-function silver() {
+function skyBlue() {
     fill('SkyBlue');
     rect(780, 350, 100, 60, 20);
     fill('black');
     textSize(28);
-    text("SkyBlue", 800, 390);
+    text("SkyBlue", 782, 390);
 }

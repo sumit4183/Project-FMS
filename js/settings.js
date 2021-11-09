@@ -6,12 +6,18 @@ function setup() {
 function settings() {
     mainMenuButton();
 
+    //BackGround Title
+    fill('black');
+    rect(380, 90, 400, 40, 20);
+    fill('white');
+    text("Background Options", 462, 117)
+
     pink();
     lightCyan();
     ivory();
     antiqueWhite();
     olive();
-    silver();
+    skyBlue();
 }
 
 let state = "settings";
@@ -19,9 +25,6 @@ let state2 = "hello";
 
 function draw() {
     if (state == "settings") {background(bcolor); settings();}
-        /*if (state2 == "pink") {pink();
-        }
-        else if (state2 == "lightcyan") {lightCyan();}*/
     else {background(255); text("ERROR OCCURRED", 500, 500);}
 
 }
@@ -32,12 +35,28 @@ function mousePressed() {
         if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}
         if (state2 == "hello"){
             //Pink color settings500, 200, 180, 60
-            if (mouseX > 300 && mouseX < 400 && mouseY > 200 && mouseY < 260) {state2 = "pink"; 
+            if (mouseX > 300 && mouseX < 400 && mouseY > 200 && mouseY < 260) {
                 bcolor='pink';
                 storeItem('bcolor', bcolor);
             }
-            else if (mouseX > 500 && mouseX < 680 && mouseY > 200 && mouseY < 260) {state2 = "lightcyan";
-                bcolor='blue';
+            else if (mouseX > 500 && mouseX < 680 && mouseY > 200 && mouseY < 260) {
+                bcolor='LightCyan';
+                storeItem('bcolor', bcolor);
+            }
+            else if (mouseX > 780 && mouseX < 880 && mouseY > 200 && mouseY < 260) {
+                bcolor='Ivory';
+                storeItem('bcolor', bcolor);
+            }
+            else if (mouseX > 300 && mouseX < 400 && mouseY > 350 && mouseY < 410) {
+                bcolor='Olive';
+                storeItem('bcolor', bcolor);
+            }
+            else if (mouseX > 500 && mouseX < 680 && mouseY > 350 && mouseY < 410) {
+                bcolor='AntiqueWhite';
+                storeItem('bcolor', bcolor);
+            }
+            else if (mouseX > 780 && mouseX < 880 && mouseY > 350 && mouseY < 410) {
+                bcolor='SkyBlue';
                 storeItem('bcolor', bcolor);
             }
         }
