@@ -169,7 +169,7 @@ function mousePressed() {
         else if (d<60) {
           if (d<60) {
               n1=1;k1=1;
-              state = "settings";
+              window.location = "./settings.html";
               disp1.remove();displ1.remove();}
         }
         //Going to about page

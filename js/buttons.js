@@ -4,7 +4,7 @@ function setup() {
 }
 
 var right = 0;
-var bcolor = "pink";
+var bcolor = "PaleGreen";
 
 function mainMenuButton() {
     fill('lemonChiffon');

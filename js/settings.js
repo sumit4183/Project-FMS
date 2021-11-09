@@ -5,6 +5,13 @@ function setup() {
 
 function settings() {
     mainMenuButton();
+
+    //Pink Background Button
+    fill('pink');
+    rect(300, 200, 100, 60, 20);
+    fill('black');
+    textSize(28);
+    text("Pink", 323, 240)
 }
 
 let state = "settings";
@@ -16,6 +23,7 @@ function draw() {
 
 function mousePressed() {
     if (state == "settings") {
-        
+        //Going to main menu page
+        if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}
     }
 }

@@ -7,10 +7,12 @@ const colors = ['blue', 'red', 'yellow', 'green', 'purple',
                 'orange', 'black', 'grey', 'white', 'lime'];
 
 var col1, col2;
-var i2 = 0;
+var i2 = 0, j2 = 0;
 var timerValue = 2;
+var counter = 0;
 
 function game2() {
+  if (j2 < 10) {  
     background(bcolor);
   
     //Buttons
@@ -41,6 +43,7 @@ function game2() {
     fill('black')
     text(floor(timerValue), 200, 200);
     setInterval(timer, 1000);
+  }
 }
 
 function timer() {
@@ -51,7 +54,7 @@ function timer() {
 
 
 function callColor() {
-    while (i2 == 0) {
+    if (i2 < 10 ) {
       let t1 = Math.floor(Math.random() * 10);
       col1 = colors[t1];
       let t2 = Math.floor(Math.random() * 10)
@@ -70,7 +73,7 @@ function draw() {
 function mousePressed() {
     //Game 2 Page
     if (state == "game2") {
-      //After hitting submit button640, 450, 120, 70, 20
+      //After hitting submit button
       if (mouseX > 1000 && mouseX < 1120 && mouseY > 500 && mouseY < 580) {window.location = "./result2.html";}
       else if (mouseX > 440 && mouseX < 560 && mouseY > 450 && mouseY < 520) {
         right++;

@@ -28,7 +28,7 @@ function mousePressed() {
         else if (mouseX > 550 && mouseX < 650 && mouseY > 200 && mouseY < 280) {window.location = "./game2.html";}
         //Going to settings page
         else if (d<60) {
-            if (d<60) {state = "settings";}
+            if (d<60) {window.location = "./settings.html";}
         }
         //Going to about page
         else if (mouseX > 90 && mouseY > 500 && mouseX < 265 && mouseY < 600) {state = "about2";}
