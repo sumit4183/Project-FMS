@@ -3,7 +3,8 @@ function setup() {
     background(bcolor);
 }
 
-bcolor = "pink";
+var right = 0;
+var bcolor = "pink";
 
 function mainMenuButton() {
     fill('lemonChiffon');
