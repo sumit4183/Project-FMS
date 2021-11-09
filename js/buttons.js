@@ -1,10 +1,18 @@
+let bcolor;
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
+
+    bcolor = getItem('bcolor');
+    if(bcolor === null){
+        bcolor = "Ivory";
+    }
     background(bcolor);
+    print(bcolor)
 }
 
 var right = 0;
-var bcolor = "PaleGreen";
+//let bcolor = "Ivory";
+
 
 function mainMenuButton() {
     fill('lemonChiffon');
@@ -82,4 +90,53 @@ function backButton() {
     fill('black');
     textSize(32);
     text("Back", 1097, 64);
+}
+
+function pink() {
+    fill('pink');
+    rect(300, 200, 100, 60, 20);
+    fill('black');
+    textSize(28);
+    text("Pink", 323, 240);
+    //bcolor = "pink";
+}
+
+function lightCyan() {
+    fill('LightCyan');
+    rect(500, 200, 180, 60, 20);
+    fill('black');
+    textSize(28);
+    text("Light Cyan", 523, 240);
+}
+
+function ivory() {
+    fill('Ivory');
+    rect(780, 200, 100, 60, 20);
+    fill('black');
+    textSize(28);
+    text("Ivory", 800, 240);
+}
+
+function antiqueWhite() {
+    fill('AntiqueWhite');
+    rect(500, 350, 180, 60, 20);
+    fill('black');
+    textSize(28);
+    text("Antique White", 507, 390);
+}
+
+function olive() {
+    fill('Olive');
+    rect(300, 350, 100, 60, 20);
+    fill('black');
+    textSize(28);
+    text("Olive", 320, 390);
+}
+
+function silver() {
+    fill('SkyBlue');
+    rect(780, 350, 100, 60, 20);
+    fill('black');
+    textSize(28);
+    text("SkyBlue", 800, 390);
 }

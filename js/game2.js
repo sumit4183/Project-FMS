@@ -1,6 +1,7 @@
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
+    print(bcolor)
 }
 
 const colors = ['blue', 'red', 'yellow', 'green', 'purple', 
@@ -12,6 +13,7 @@ var timerValue = 2;
 var counter = 0;
 
 function game2() {
+  //background(bcolor);
   if (j2 < 10) {  
     background(bcolor);
   
