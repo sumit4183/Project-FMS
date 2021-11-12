@@ -7,7 +7,6 @@ function setup() {
         bcolor = "Ivory";
     }
     background(bcolor);
-    print(bcolor)
 }
 
 var right = 0;
