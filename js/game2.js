@@ -8,7 +8,7 @@ const colors = ['blue', 'red', 'yellow', 'green', 'purple',
 
 var col1, col2;
 var i2 = 0, j2 = 0;
-var timerValue = 2, timerValue = 20;
+var timerValue = 2, timerValue2 = 20;
 var counter = 0;
 
 function game2() {
