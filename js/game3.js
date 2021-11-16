@@ -14,15 +14,10 @@ function game3() {
     textFont('ABeeZee');
     fill('black');
     textSize(32);
-    text("Trace the following image:", 440, 160);
+    text("Follow the circle:", 500, 160);
   
     fill('#BBF291');
-    rect(500, 240, 220, 220, 20);
-    textFont('ABeeZee');
-    fill('black');
-    textSize(32);
-    text("(Image", 550, 330);
-    text("PlaceHolder)", 530, 370);
+    ellipse(620, 350, 50, 50);
 }
 
 let state = "game3";
