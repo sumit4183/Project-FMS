@@ -1,6 +1,31 @@
+let rad = 60;
+let xpos = 620, ypos = 350;
+
+let xspeed = 2.0;
+let yspeed = 1.5;
+
+let xdirection = 1;
+let ydirection = 1;
+
+let mousePos = 0;
+
+let cx;
+let cy;
+let circleSize = 60;
+let overCircle = false;
+let locked = false;
+let xOffset = 0.0;
+let yOffset = 0.0;
+
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
+    canvas = createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
+    frameRate(30);
+    ellipseMode(RADIUS);
+    // Set the starting position of the shape
+    xpos = width / 2;
+    ypos = height / 2;
+
 }
 
 function game3() {
@@ -15,9 +40,23 @@ function game3() {
     fill('black');
     textSize(32);
     text("Follow the circle:", 500, 160);
-  
+
+    fill('white');
+    rect(272, 200, 700, 350, 20);
+    xpos = xpos + xspeed * xdirection;
+    ypos = ypos + yspeed * ydirection;
+
+    
+    if (xpos > width - rad || xpos < rad) {
+        xdirection *= -1;
+    }
+    if (ypos > height - rad || ypos < rad) {
+        ydirection *= -1;
+    }
+
+
     fill('#BBF291');
-    ellipse(620, 350, 50, 50);
+    ellipse(xpos, ypos, rad, rad);
 }
 
 let state = "game3";
