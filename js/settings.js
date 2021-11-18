@@ -20,7 +20,7 @@ function settings() {
     skyBlue();
 }
 
-let state = "settings";
+var state = "settings";
 let state2 = "hello";
 
 function draw() {

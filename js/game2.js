@@ -1,3 +1,4 @@
+
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
@@ -6,6 +7,7 @@ function setup() {
 const colors = ['blue', 'red', 'yellow', 'green', 'purple', 
                 'orange', 'black', 'grey', 'white', 'lime'];
 
+var firstColorChange = false;;
 var col1, col2;
 var i2 = 0, j2 = 0;
 var timerValue = 2, timerValue2 = 20;
@@ -61,13 +63,24 @@ function timer2() {
 
 
 function callColor() {
+  if(firstColorChange == false){
+    firstColorChange = true;
     if (i2 < 10 ) {
       let t1 = Math.floor(Math.random() * 10);
       col1 = colors[t1];
       let t2 = Math.floor(Math.random() * 10)
       col2 = colors[t2];
-      i2++;
+      i2++; 
     }
+  } else if( floor(timerValue) == 0 ){
+      if (i2 < 10 ) {
+        let t1 = Math.floor(Math.random() * 10);
+        col1 = colors[t1];
+        let t2 = Math.floor(Math.random() * 10)
+        col2 = colors[t2];
+        i2++; 
+      }
+  }
 }
 
 let state = "game2";
