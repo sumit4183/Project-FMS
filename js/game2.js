@@ -12,6 +12,7 @@ var col1, col2;
 var i2 = 0, j2 = 0;
 var timerValue = 2, timerValue2 = 20;
 var counter = 0;
+var score2 = 0;
 
 function game2() {
   //background(bcolor);
@@ -42,7 +43,9 @@ function game2() {
     rect(640, 450, 120, 70, 20);
     fill(col2);
     text(col1, 660, 495);
-  
+    
+    console.log(score2);
+
     fill('black')
     text(floor(timerValue), 200, 200);
     setInterval(timer, 1000);
@@ -65,7 +68,7 @@ function timer2() {
 function callColor() {
   if(firstColorChange == false){
     firstColorChange = true;
-    if (i2 < 10 ) {
+    if (i2 < 5 ) {
       let t1 = Math.floor(Math.random() * 10);
       col1 = colors[t1];
       let t2 = Math.floor(Math.random() * 10)
@@ -73,7 +76,8 @@ function callColor() {
       i2++; 
     }
   } else if( floor(timerValue) == 0 ){
-      if (i2 < 10 ) {
+      if (i2 < 5 ) {
+        timerValue = 3;
         let t1 = Math.floor(Math.random() * 10);
         col1 = colors[t1];
         let t2 = Math.floor(Math.random() * 10)
@@ -100,6 +104,11 @@ function mousePressed() {
       } 
       else if (mouseX > 640 && mouseX < 760 && mouseY > 450 && mouseY < 520){
         right++;
+      }
+      if (timerValue > 0) {
+        if (mouseX > 440 && mouseX < 560 && mouseY > 450 && mouseY < 520) {
+          score2++;
+        }
       }
     }
 }
