@@ -18,7 +18,7 @@ let xOffset = 0.0;
 let yOffset = 0.0;
 
 function setup() {
-    canvas = createCanvas(window.innerWidth, window.innerHeight);
+    createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
     frameRate(30);
     ellipseMode(RADIUS);
@@ -41,6 +41,7 @@ function game3() {
     textSize(32);
     text("Follow the circle:", 500, 160);
 
+    
     fill('white');
     rect(272, 200, 700, 350, 20);
     xpos = xpos + xspeed * xdirection;
