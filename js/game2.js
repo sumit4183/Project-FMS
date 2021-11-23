@@ -20,7 +20,7 @@ function game2() {
     background(bcolor);
   
     //Buttons
-    submitButton();
+    
     
     fill('#BBF291');
     rect(270, 30, 700, 60, 20);
@@ -45,10 +45,52 @@ function game2() {
     text(col1, 660, 495);
     
     console.log(score2);
+    console.log("hello");
+    console.log(i2);
 
     fill('black')
     text(floor(timerValue), 200, 200);
     setInterval(timer, 1000);
+
+    if (timerValue == 0 || i2 == 5) {
+      submitButton();
+    }
+
+    if (i2 == 0 && score2 == 1) {
+      score2 = 1
+    }
+    else if (i2 == 1 && score2 == 2) {
+      score2 = 2
+    }
+    else if (i2 == 2 && score2 == 3) {
+      score2 = 3;
+    }
+    else if (i2 == 3 && score2 == 4) {
+      score2 = 4;
+    }
+    else if (i2 == 4 && score2 == 5) {
+      score2 = 5;
+    }
+    else if (score2 > 5) { 
+      score2 = 5;
+    }
+
+    if (score2 == 1) {
+      text(score2, 600, 400);
+    }
+    else if (score2 == 2) {
+      text(score2, 600, 400);
+    }
+    else if (score2 == 3) {
+      text(score2, 600, 400);
+    }
+    else if (score2 == 4) {
+      text(score2, 600, 400);
+    }
+    else if (score2 == 5) {
+      text(score2, 600, 400);
+    }
+    //text(score2, 600, 400);
   }
 }
 
@@ -99,12 +141,6 @@ function mousePressed() {
     if (state == "game2") {
       //After hitting submit button
       if (mouseX > 1000 && mouseX < 1120 && mouseY > 500 && mouseY < 580) {window.location = "./result2.html";}
-      else if (mouseX > 440 && mouseX < 560 && mouseY > 450 && mouseY < 520) {
-        right++;
-      } 
-      else if (mouseX > 640 && mouseX < 760 && mouseY > 450 && mouseY < 520){
-        right++;
-      }
       if (timerValue > 0) {
         if (mouseX > 440 && mouseX < 560 && mouseY > 450 && mouseY < 520) {
           score2++;

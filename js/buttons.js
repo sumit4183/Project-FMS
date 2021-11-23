@@ -9,8 +9,6 @@ function setup() {
     background(bcolor);
 }
 
-var right = 0;
-
 function mainMenuButton() {
     fill('lemonChiffon');
     strokeWeight(1);
