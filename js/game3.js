@@ -1,8 +1,8 @@
-let rad = 60;
+let rad = 70;
 let xpos = 620, ypos = 350;
 
-let xspeed = 2.0;
-let yspeed = 1.5;
+let xspeed = 1.5;
+let yspeed = 1.0;
 
 let xdirection = 1;
 let ydirection = 1;
@@ -23,6 +23,8 @@ function setup() {
     frameRate(30);
     ellipseMode(RADIUS);
     // Set the starting position of the shape
+    width = 700
+    height = 350
     xpos = width / 2;
     ypos = height / 2;
 
@@ -43,18 +45,21 @@ function game3() {
 
     
     fill('white');
-    rect(272, 200, 700, 350, 20);
+    rect(270, 200, 700, 350, 20);
     xpos = xpos + xspeed * xdirection;
     ypos = ypos + yspeed * ydirection;
 
     
-    if (xpos > width - rad || xpos < rad) {
+    if (xpos < 270 + (rad / 2) || xpos > 970 - (rad / 2)) {
         xdirection *= -1;
     }
-    if (ypos > height - rad || ypos < rad) {
+    if (ypos < 200 + (rad / 2) || ypos > 550 - (rad / 2)) {
         ydirection *= -1;
     }
 
+    while (mousePos < xpos - rad && mousePos > xpos + rad) {
+        
+    }
 
     fill('#BBF291');
     ellipse(xpos, ypos, rad, rad);
