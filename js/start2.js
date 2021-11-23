@@ -25,7 +25,11 @@ function mousePressed() {
         //Going to main menu page
         if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}
         //Going to game 2 page
-        else if (mouseX > 550 && mouseX < 650 && mouseY > 200 && mouseY < 280) {window.location = "./game2.html";}
+        else if (mouseX > 550 && mouseX < 650 && mouseY > 200 && mouseY < 280) {
+            score2 = 0;
+            storeItem('score2', score2);
+            window.location = "./game2.html";
+        }
         //Going to settings page
         else if (d<60) {
             if (d<60) {window.location = "./settings.html";}

@@ -95,7 +95,7 @@ function dispScore1() {
         n1 = 2;
       }
       game1Per.toString();
-      dispsc1 = "Your score: " + game1Per;
+      dispsc1 = "Your score: " + game1Per + " / 100";
       disp1 = createElement('h2', dispsc1);
       disp1.position(525, 280);
       k1 = 2;

@@ -1,10 +1,36 @@
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
+    
 }
+
+let displ2;
+let disp2;
+let dispsc2;
 
 function result2() {
     background(bcolor);
+    score2 = getItem('score2');
+    i2 = getItem('i2');
+    if (score2 > 5) {
+        score2 = 5;
+    }
+    if (score2 == i2) {
+        displ2 = createElement('h1', "Congratulations");
+        displ2.position(495, 200);
+    }
+    else if (score2 == 0) {
+        displ2 = createElement('h1', "Don't worry. You tried");
+        displ2.position(455, 200);
+    }
+    else {
+        displ2 = createElement('h1', "You did well");
+        displ2.position(515, 200);
+    }
+    dispsc2 = "Your score: " + score2 + " / " + i2;
+    disp2 = createElement('h2', dispsc2);
+    disp2.position(525, 280);
+    //console.log(i2);
 
     //Buttons
     mainMenuButton();
