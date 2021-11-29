@@ -24,29 +24,14 @@ function mainMenu() {
     rect(490, 150, 300, 200, 20);
     fill('yellow');
     rect(930, 150, 300, 200, 20);
-  
+
+    //Text on the game buttons
     textSize(50);
     fill('black');
     text("Typing", 130, 265);
     text("React", 580, 265);
     text("Trace", 1020, 265);
   }
-
-  function about() {
-    background(bcolor);
-
-    //main menu button
-    mainMenuButton();
-  
-    fill('white');
-    rect(270, 200, 760, 270, 20);
-  
-    fill('black');
-    textSize(25);
-    text("Credit to Jake Swartzmiller, Sumit Patel, and Faysel Bekri", 300, 300);
-    text("FSE100-93750, Group #8", 300, 350);
-    text("Project FMS: Gaming", 300, 400);
-}
 
 let state = "menu";
 

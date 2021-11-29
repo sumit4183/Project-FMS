@@ -3,6 +3,7 @@ function setup() {
     background(bcolor);
 }
 
+//Functions to draw contents on start page of game 3
 function start3() {
     //Buttons
     mainMenuButton();
@@ -20,6 +21,7 @@ function draw() {
 }
 
 function mousePressed() {
+    //If you are on game 3 page
     if (state == "start3") {
         let d = dist(mouseX, mouseY, 1100, 555);
         //Going to main menu page

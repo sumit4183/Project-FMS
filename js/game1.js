@@ -3,14 +3,10 @@ function setup() {
     background(bcolor);
 }
 
-var input;
-var h5;
-var sen;
-var countCorrect;
-var disp1;
-var game1Per;
-var dispsc1;
+//Variables to dipslay and remove contents on the screen runnning in loop
 var i1 = j1 = k1 = n1 = 1;
+
+//Array of sentences to been diplayed on random
 const sentences = ["Fish and visitors stink after three days", 
   "My wallet is like an onion, opening it makes me cry", 
   "Friends buy you food. Best friends eat your food", 
@@ -22,6 +18,15 @@ const sentences = ["Fish and visitors stink after three days",
   "If you can’t beat them, arrange to have them beaten",
   "He who wakes up early, yawns all day long"];
 
+var sen;    //Fetching random sentence from the list and storing in this variable
+var h5;     //Displaying random sentence on the screen 
+var input;  //Taking input from the user
+var countCorrect; //Count the number of words typed correct
+var game1Per; //Percentage of words right
+var dispsc1;  //Score saved in this variable
+var disp1;    //Displaying score on the screen
+
+//Function that displays game 1 page
 function game1() {
     background(bcolor);
   
@@ -34,21 +39,26 @@ function game1() {
     fill('black');
     textSize(32);
     text("Type the following sentence:", 440, 160);
-  
+
+    //Fetching random sentence and displaying it
     callsen();
+    //Displaying input box, taking input from the user and storing it
     callin();
 }
-  
+ 
+//Function that fetch random sentence from the list
 function callsen() {
     while (i1 == 1) {
       let t = Math.floor(Math.random() * 10);
       sen = sentences[t];
+      //Displaying fetched random sentence
       h5 = createElement('h2', sen);
       h5.position(360, 250);
       i1 = 2;
     }
 }
-  
+
+//Function that display input box, takes input fromo the user
 function callin() {
     while (j1 == 1) {
       input = createInput('');
@@ -58,15 +68,16 @@ function callin() {
       j1 = 2;
     } 
 }
-  
+
+//Function that calculates score and displays it on result page
 function dispScore1() {
     while (k1 == 1) {
       countCorrect = 0;
       game1Per = 0;
       const string = input.value();
-      var l = 0;
-      var m = 0;
-  
+      var l = 0, m = 0; //Loop variables
+      
+      //Comparing input and fetched random sentence to calculate score
       var senList1 = sen.split(" ");
       var sentList1 = sen.split(" ");
       var inpList1 = string.split(" ");
@@ -79,6 +90,8 @@ function dispScore1() {
         }
       }
       game1Per = Number(((countCorrect / sentList1.length) * 100).toFixed(2));
+
+      //Displaying feedback depending on the score
       while (n1 == 1) {
         if (game1Per == 100) {
           displ1 = createElement('h1', "Congratulations");
@@ -94,6 +107,8 @@ function dispScore1() {
         }
         n1 = 2;
       }
+
+      //Displaying score
       game1Per.toString();
       dispsc1 = "Your score: " + game1Per + " / 100";
       disp1 = createElement('h2', dispsc1);
@@ -102,22 +117,7 @@ function dispScore1() {
     }
 }
 
-function about1() {
-  background(bcolor);
-  //main menu button
-  mainMenuButton();
-  backButton();
-
-  fill('white');
-  rect(270, 200, 760, 270, 20);
-
-  fill('black');
-  textSize(25);
-  text("The user will be prompted to type a sentence matching", 300, 300);
-  text("the one given to them. If they match the sentence well enough,", 300, 350);
-  text("they will get a higher score. Make sure to add spaces where needed.", 300, 400);
-}
-
+//Function that displays result of game 1
 function result1() {
     background(bcolor);
 
@@ -139,6 +139,7 @@ function draw() {
 }
 
 function mousePressed() {
+  //Game 1 page
     if (state == "game1") {
         //After hitting submit button
         if (mouseX > 1000 && mouseX < 1120 && mouseY > 500 && mouseY < 580) {

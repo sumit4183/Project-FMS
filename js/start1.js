@@ -3,6 +3,7 @@ function setup() {
     background(bcolor);
 }
 
+//Function to draw contents on start page of game 1
 function start1() {
     //Buttons
     mainMenuButton();
@@ -20,6 +21,7 @@ function draw() {
 }
 
 function mousePressed() {
+    //If you are on game 1 page
     if (state == "start1") {
         let d = dist(mouseX, mouseY, 1100, 555);
         //Going to main menu page
@@ -34,7 +36,7 @@ function mousePressed() {
         else if (mouseX > 90 && mouseY > 500 && mouseX < 265 && mouseY < 600) {state = "about1";}
     }
     
-    //About 1 Page
+    //If you are on about 1 Page
     else if (state == "about1") {
       //Going to main menu page
       if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}

@@ -12,6 +12,7 @@ function settings() {
     fill('white');
     text("Background Options", 462, 117)
 
+    //Buttons for changing colors
     pink();
     lightCyan();
     ivory();
@@ -34,7 +35,7 @@ function mousePressed() {
         //Going to main menu page
         if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}
         if (state2 == "hello"){
-            //Pink color settings500, 200, 180, 60
+            //Changing background color
             if (mouseX > 300 && mouseX < 400 && mouseY > 200 && mouseY < 260) {
                 bcolor='pink';
                 storeItem('bcolor', bcolor);

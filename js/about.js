@@ -1,3 +1,4 @@
+//Function that about page of the project
 function about() {
     background(bcolor);
     //main menu button
@@ -13,6 +14,7 @@ function about() {
     text("Project FMS: Gaming", 300, 400);
   }
   
+  //Function displays about page of game 1
   function about1() {
     background(bcolor);
     //main menu button
@@ -29,6 +31,7 @@ function about() {
     text("they will get a higher score. Make sure to add spaces where needed.", 300, 400);
   }
   
+  //Function that displays about page of game 2
   function about2() {
     background(bcolor);
     //main menu button
@@ -45,6 +48,7 @@ function about() {
     text("the color blue is displayed, choose the word blue).", 300, 400);
   }
   
+  //Function that displays about page of game 3
   function about3() {
     background(bcolor);
     //main menu button
