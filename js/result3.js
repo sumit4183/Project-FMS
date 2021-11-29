@@ -68,7 +68,7 @@ function mousePressed() {
         else if (mouseX > 90 && mouseY > 500 && mouseX < 265 && mouseY < 600) {
             j3 = 1; 
             state = "about3";
-            displ2.remove();disp2.remove();
+            displ3.remove();disp3.remove();
         }
         //Going to game 2 page again
         else if (mouseX > 535 && mouseX < 655 && mouseY >500 && mouseY < 580) {
