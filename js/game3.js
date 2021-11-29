@@ -19,24 +19,23 @@ let yOffset = 0.0;
 
 let flag3 = true;
 
+let timerValue31 = 60;
+let timerValue32 = 10;
+
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
     frameRate(30);
     ellipseMode(RADIUS);
     // Set the starting position of the shape
-    width = 700
-    height = 350
+    width = 700;
+    height = 350;
     xpos = width / 2;
     ypos = height / 2;
-
 }
 
 function game3() {
     background(bcolor);
-  
-    //Buttons
-    submitButton();
     
     fill('#BBF291');
     rect(270, 120, 700, 60, 20);
@@ -47,7 +46,13 @@ function game3() {
 
     fill('white');
     rect(270, 200, 700, 350, 20);
+    setInterval(timeIt32, 1000);
     
+    runGame();
+    
+}
+
+function runGame() {
     if (flag3) {
         xpos = xpos + xspeed * xdirection;
         ypos = ypos + yspeed * ydirection;
@@ -60,12 +65,34 @@ function game3() {
         }
         fill('#BBF291');
         circle(xpos, ypos, rad);
+        if (frameCount % 60 == 0 && timerValue31 > 0) {
+            timerValue31--;
+        }
+        if (timerValue31 == 0) {
+            fill('black');
+            textSize(70)
+            text('GAME OVER', 410, 395);
+            //Buttons
+            submitButton();
+        }
     }
-    else {
+    fill('black');
+    text("Timer: " + timerValue31, 70, 320);
+    if (!flag3) {
         fill('red');
         circle(xpos, ypos, rad);
+        fill('black');
+        textSize(70)
+        text('GAME OVER', 410, 395);
+        //Buttons
+        submitButton();
     }
-    
+}
+
+function timeIt32() {
+    if (floor(timerValue32) > 0) {
+        timerValue32-=1;
+    }
 }
 
 let state = "game3";
@@ -100,3 +127,4 @@ function mouseMoved() {
         flag3 = false;
     }
 }
+
