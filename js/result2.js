@@ -1,12 +1,11 @@
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
-    
 }
 
-let displ2;
-let disp2;
-let dispsc2;
+    let displ2;
+    let disp2;
+    let dispsc2;
 let j2 = 1;
 
 //Function that displays feedback and score when the game is finished

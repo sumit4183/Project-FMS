@@ -1,5 +1,5 @@
 let rad = 70;
-let xpos = 620, ypos = 350;
+let xpos = 620, ypos = 250;
 
 let xspeed = 1.5;
 let yspeed = 1.0;
@@ -20,18 +20,12 @@ let yOffset = 0.0;
 let flag3 = true;
 
 let timerValue31 = 60;
-let timerValue32 = 10;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
     frameRate(30);
     ellipseMode(RADIUS);
-    // Set the starting position of the shape
-    width = 700;
-    height = 350;
-    xpos = width / 2;
-    ypos = height / 2;
 }
 
 function game3() {
@@ -46,10 +40,9 @@ function game3() {
 
     fill('white');
     rect(270, 200, 700, 350, 20);
-    setInterval(timeIt32, 1000);
+    
     
     runGame();
-    
 }
 
 function runGame() {
@@ -78,7 +71,8 @@ function runGame() {
     }
     fill('black');
     text("Timer: " + timerValue31, 70, 320);
-    if (!flag3) {
+    if (!flag3 || timerValue31 == 0) {
+        flag3 = false;
         fill('red');
         circle(xpos, ypos, rad);
         fill('black');
@@ -86,12 +80,6 @@ function runGame() {
         text('GAME OVER', 410, 395);
         //Buttons
         submitButton();
-    }
-}
-
-function timeIt32() {
-    if (floor(timerValue32) > 0) {
-        timerValue32-=1;
     }
 }
 
@@ -106,15 +94,10 @@ function draw() {
 function mousePressed() {
     if (state == "game3") {
         //After hitting submit button
-        if (mouseX > 1000 && mouseX < 1120 && mouseY > 500 && mouseY < 580) {window.location = "./result3.html";}
-    }
-
-    //About 2 Page
-    else if (state == "about3") {
-      //Going to main menu page
-      if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}
-      //Going back to game 2 page
-      if (mouseX > 1080 && mouseX < 1180 && mouseY > 20 & mouseY < 90) {window.location = "./game3.html";}
+        if (mouseX > 1000 && mouseX < 1120 && mouseY > 500 && mouseY < 580) {
+            storeItem('timerValue31', timerValue31);
+            window.location = "./result3.html";
+        }
     }
 }
 
