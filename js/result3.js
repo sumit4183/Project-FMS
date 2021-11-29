@@ -27,7 +27,7 @@ function result3() {
             displ3.position(515, 200);
         }
         console.log(totalTime);
-        dispsc3 = "Your surivived for " + totalTime + " seconds";
+        dispsc3 = "Your survived for " + totalTime + " seconds";
         disp3 = createElement('h1', dispsc3);
         disp3.position(405, 280);
 

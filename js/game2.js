@@ -12,7 +12,7 @@ var col1, col2;
 var i2 = 0;
 
 //Timer variables
-var timerValue = 2, timerValue2 = 1100;
+var timerValue = 2, timerValue2 = 1300;
 var counter = 0;
 var showTimer2;
 
