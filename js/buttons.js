@@ -35,7 +35,7 @@ function aboutButton() {
 //Settings button
 function settingsButton() {
     fill('gray');
-    circle(1100, 555, 120, 70);
+    circle(1100, 555, 120);
   
     fill('black');
     textSize(32);

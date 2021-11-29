@@ -17,6 +17,8 @@ let locked = false;
 let xOffset = 0.0;
 let yOffset = 0.0;
 
+let flag3 = true;
+
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
     background(bcolor);
@@ -43,26 +45,27 @@ function game3() {
     textSize(32);
     text("Follow the circle:", 500, 160);
 
-    
     fill('white');
     rect(270, 200, 700, 350, 20);
-    xpos = xpos + xspeed * xdirection;
-    ypos = ypos + yspeed * ydirection;
-
     
-    if (xpos < 270 + (rad / 2) || xpos > 970 - (rad / 2)) {
-        xdirection *= -1;
-    }
-    if (ypos < 200 + (rad / 2) || ypos > 550 - (rad / 2)) {
-        ydirection *= -1;
-    }
+    if (flag3) {
+        xpos = xpos + xspeed * xdirection;
+        ypos = ypos + yspeed * ydirection;
 
-    while (mousePos < xpos - rad && mousePos > xpos + rad) {
-        
+        if (xpos < 270 + (rad / 2) || xpos > 970 - (rad / 2)) {
+            xdirection *= -1;
+        }
+        if (ypos < 200 + (rad / 2) || ypos > 550 - (rad / 2)) {
+            ydirection *= -1;
+        }
+        fill('#BBF291');
+        circle(xpos, ypos, rad);
     }
-
-    fill('#BBF291');
-    ellipse(xpos, ypos, rad, rad);
+    else {
+        fill('red');
+        circle(xpos, ypos, rad);
+    }
+    
 }
 
 let state = "game3";
@@ -85,5 +88,15 @@ function mousePressed() {
       if (mouseX > 20 && mouseX < 110 && mouseY > 20 && mouseY < 90) {window.location = "./main.html";}
       //Going back to game 2 page
       if (mouseX > 1080 && mouseX < 1180 && mouseY > 20 & mouseY < 90) {window.location = "./game3.html";}
+    }
+}
+
+function mouseMoved() {
+    let d3 = dist(mouseX, mouseY, xpos, ypos);
+    if (d3 < 35) {
+        console.log("hello");
+    }
+    else {
+        flag3 = false;
     }
 }
