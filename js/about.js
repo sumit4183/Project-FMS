@@ -26,9 +26,11 @@ function about() {
   
     fill('black');
     textSize(25);
-    text("The user will be prompted to type a sentence matching", 300, 300);
-    text("the one given to them. If they match the sentence well enough,", 300, 350);
-    text("they will get a higher score. Make sure to add spaces where needed.", 300, 400);
+    text("The user will be prompted to type a sentence matching", 300, 240);
+    text("the one given to them. If they match the sentence well enough,", 300, 290);
+    text("they will get a higher score. Make sure to add spaces where needed.", 300, 340);
+    text("Score will be calculated based on how many words the user has typed", 300, 390);
+    text("correct and will be displayed after hitting the submit button. ", 300, 440);
   }
   
   //Function that displays about page of game 2
@@ -39,13 +41,17 @@ function about() {
     backButton();
   
     fill('white');
-    rect(270, 200, 760, 270, 20);
+    rect(170, 150, 860, 370, 20);
   
     fill('black');
     textSize(25);
-    text("A color will be displayed on the screen and two words will display", 300, 300);
-    text("underneath. The user has to choose the word of the color (if", 300, 350);
-    text("the color blue is displayed, choose the word blue).", 300, 400);
+    text("A color will be displayed on the screen and two words will display underneath.", 190, 190);
+    text("The user has to choose the word of the color (if the color blue is displayed, choose", 190, 240);
+    text("the word blue). The game will run 5 times with a 2 second timer running ", 190, 290);
+    text("simultaneously each time and when the timer hits 0 it will display another color.", 190, 340);
+    text("You can also see your score on the screen. After five chances you will ", 190, 390);
+    text("automatically be directed to the result page. You can also end the game by clicking", 190, 440);
+    text("on the submit button. The timers speed will increase every chance. ", 190, 490);
   }
   
   //Function that displays about page of game 3
@@ -56,12 +62,15 @@ function about() {
     backButton();
   
     fill('white');
-    rect(270, 200, 760, 270, 20);
+    rect(170, 150, 860, 370, 20);
   
     fill('black');
-    textSize(26);
-    text("The user will be prompted to put the cursor inside the center", 300, 250);
-    text("circle on their screen. The circle will then begin to move while", 300, 310);
-    text("the user tries to keep the mouse inside. The longer they go,", 300, 370);
-    text("the higher the score the user will get.", 300, 430);
+    textSize(25);
+    text("The user will be prompted to put the cursor inside the circle on their screen. The ", 190, 190);
+    text("circle will begin to move as soon as they hit the start game button. The user needs", 190, 240);
+    text("to keep the cursor inside the circle in order to keep the game running. The result", 190, 290);
+    text("will be displayed after hitting the submit button in terms of how many seconds they", 190, 340);
+    text("survived. If the cursor goes outside the circle or the timer hits 0, game will be over.", 190, 390);
+    text("The ", 190, 440);
+    text("d", 190, 490);
   }
