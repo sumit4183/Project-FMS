@@ -71,6 +71,6 @@ function about() {
     text("to keep the cursor inside the circle in order to keep the game running. The result", 190, 290);
     text("will be displayed after hitting the submit button in terms of how many seconds they", 190, 340);
     text("survived. If the cursor goes outside the circle or the timer hits 0, game will be over.", 190, 390);
-    text("When you click on start game button, the cursor will already be in the circle, the user", 190, 440);
-    text("need to keep it in the circle. A timer of 30 second will be display on the screen.", 190, 490);
+    text("When you click on start game button, the cursor will already be in the circle, the", 190, 440);
+    text("user need to keep it in the circle. A timer of 30 second will be display on the screen.", 190, 490);
   }
