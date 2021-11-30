@@ -66,11 +66,11 @@ function about() {
   
     fill('black');
     textSize(25);
-    text("The user will be prompted to put the cursor inside the circle on their screen. The ", 190, 190);
-    text("circle will begin to move as soon as they hit the start game button. The user needs", 190, 240);
-    text("to keep the cursor inside the circle in order to keep the game running. The result", 190, 290);
-    text("will be displayed after hitting the submit button in terms of how many seconds they", 190, 340);
-    text("survived. If the cursor goes outside the circle or the timer hits 0, game will be over.", 190, 390);
-    text("When you click on start game button, the cursor will already be in the circle, the", 190, 440);
-    text("user need to keep it in the circle. A timer of 30 second will be display on the screen.", 190, 490);
+    text("The user will be prompted to put the cursor inside the circle on their screen. The ", 185, 190);
+    text("circle will begin to move as soon as they hit the start game button. The user needs", 185, 240);
+    text("to keep the cursor inside the circle in order to keep the game running. The result", 185, 290);
+    text("will be displayed after hitting the submit button in terms of how many seconds they", 185, 340);
+    text("survived. If the cursor goes outside the circle or the timer hits 0, game will be over.", 185, 390);
+    text("When you click on start game button, the cursor will already be in the circle, the", 185, 440);
+    text("user need to keep it in the circle. A timer of 30 second will be display on the screen.", 185, 490);
   }
