@@ -19,7 +19,7 @@ let yOffset = 0.0;
 
 let flag3 = true;
 
-let timerValue31 = 60;
+let timerValue31 = 30;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);

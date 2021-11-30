@@ -13,8 +13,8 @@ function result3() {
     while (j3 == 1) {
         background(bcolor);
         timerValue31 = getItem('timerValue31');
-        totalTime = 60 - timerValue31;
-        if (timerValue31 == 60) {
+        totalTime = 30 - timerValue31;
+        if (timerValue31 == 30) {
             displ3 = createElement('h1', "Don't worry. You tried");
             displ3.position(445, 200);
         }
