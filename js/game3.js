@@ -1,25 +1,15 @@
-let rad = 70;
-let xpos = 620, ypos = 250;
+let rad = 70;   //Circle radius
+let xpos = 620, ypos = 250; //Start position of the circle
 
+//Variables to determine speed and direction of the circle
 let xspeed = 1.5;
 let yspeed = 1.0;
-
 let xdirection = 1;
 let ydirection = 1;
 
-let mousePos = 0;
+let flag3 = true;   //Variable to determine if the pointer is inside the circle
 
-let cx;
-let cy;
-let circleSize = 60;
-let overCircle = false;
-let locked = false;
-let xOffset = 0.0;
-let yOffset = 0.0;
-
-let flag3 = true;
-
-let timerValue31 = 30;
+let timerValue31 = 30;  //Timer value
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
@@ -41,12 +31,16 @@ function game3() {
     fill('white');
     rect(270, 200, 700, 350, 20);
     
-    
+    //Function that runs the game
     runGame();
 }
 
 function runGame() {
+
+    //Checks condition if the pointer is inside the circle
     if (flag3) {
+
+        //Code for the circle to move in randomm direction
         xpos = xpos + xspeed * xdirection;
         ypos = ypos + yspeed * ydirection;
 
@@ -58,9 +52,13 @@ function runGame() {
         }
         fill('#BBF291');
         circle(xpos, ypos, rad);
+
+        //Running timer
         if (frameCount % 60 == 0 && timerValue31 > 0) {
             timerValue31--;
         }
+
+        //Displaying message when the timer hits 0
         if (timerValue31 == 0) {
             fill('black');
             textSize(70)
@@ -69,8 +67,12 @@ function runGame() {
             submitButton();
         }
     }
+
+    //Displaying timer
     fill('black');
     text("Timer: " + timerValue31, 70, 320);
+
+    //Dispalying message if the pointer goes outside the circle adn stopping the circle at the current position
     if (!flag3 || timerValue31 == 0) {
         flag3 = false;
         fill('red');
@@ -101,10 +103,11 @@ function mousePressed() {
     }
 }
 
+//Function that checks if the mouse pointer is inside/outside the circle
 function mouseMoved() {
     let d3 = dist(mouseX, mouseY, xpos, ypos);
     if (d3 < 35) {
-        console.log("hello");
+        flag3 = true;
     }
     else {
         flag3 = false;
